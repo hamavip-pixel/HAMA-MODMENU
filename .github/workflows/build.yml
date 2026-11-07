@@ -1,4 +1,3 @@
-
 name: HAMA VIP Build
 
 on:
@@ -11,23 +10,33 @@ jobs:
   build:
     runs-on: macos-latest
 
+    env:
+      THEOS: ${{ github.workspace }}/theos
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Theos
+      - name: Install Dependencies
         run: |
           brew install ldid
-          git clone --recursive https://github.com/theos/theos.git $THEOS
+
+      - name: Install Theos
+        run: |
+          git clone --recursive https://github.com/theos/theos.git "$THEOS"
+
+      - name: Verify Theos
+        run: |
+          test -f "$THEOS/makefiles/common.mk"
+          echo "Theos installed successfully"
 
       - name: Build
         run: |
           make package
-        env:
-          THEOS: /Users/runner/theos
 
-      - name: Upload
+      - name: Upload Build
         uses: actions/upload-artifact@v4
         with:
           name: HAMA-VIP-Build
           path: packages/*
+          if-no-files-found: error
