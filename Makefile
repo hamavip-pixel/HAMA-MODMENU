@@ -7,7 +7,7 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = HAMA_VIP
 
-HAMA_VIP_FILES = main.mm
+HAMA_VIP_FILES = main.xm
 HAMA_VIP_FRAMEWORKS = UIKit Foundation
 HAMA_VIP_CFLAGS = -fobjc-arc
 
