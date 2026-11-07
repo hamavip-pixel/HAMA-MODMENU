@@ -1,0 +1,33 @@
+
+name: HAMA VIP Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Theos
+        run: |
+          brew install ldid
+          git clone --recursive https://github.com/theos/theos.git $THEOS
+
+      - name: Build
+        run: |
+          make package
+        env:
+          THEOS: /Users/runner/theos
+
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: HAMA-VIP-Build
+          path: packages/*
