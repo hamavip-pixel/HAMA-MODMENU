@@ -1,0 +1,9 @@
+
+Package: com.hama.vip
+Name: HAMA VIP
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: HAMA VIP Interface
+Maintainer: HAMA
+Author: HAMA
+Section: Tweaks
