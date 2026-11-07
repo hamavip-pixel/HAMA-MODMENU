@@ -1,4 +1,4 @@
-// HMOOD__TG@i_8_f
+// HAMA MOD
  
 
 #import "Engine.h"
@@ -57,7 +57,7 @@
 #include "ESP/Engine_2.h"
 #undef HMOOD_METALBIEW_IMPLEMENTATION
 
-// HMOOD__TG@i_8_f
+// HAMA MOD
 static bool IsAimTriggerActive(const ASTExtraPlayerCharacter* player) {
     if (!player) return false;
     const bool fire = player->bIsWeaponFiring;
