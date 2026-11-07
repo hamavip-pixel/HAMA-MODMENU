@@ -1836,7 +1836,7 @@ namespace CyberMenu {
 
     static void openChannel() {
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSURL* url = [NSURL URLWithString:@"https://t.me/hmoodhack"];
+            NSURL* url = [NSURL URLWithString:@"https://t.me/hama_vip1"];
             [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
         });
     }
@@ -1861,7 +1861,7 @@ namespace CyberMenu {
         c.dl->AddRectFilledMultiColor(c.p(17, 59), c.p(335, 64), IM_COL32(28, 6, 13, 150),
                                       IM_COL32(31, 6, 14, 150), IM_COL32(12, 8, 12, 0),
                                       IM_COL32(12, 8, 12, 0));
-        homeText(c, 28, 31, "HMOOD VIP", 17.5f, White, 274);
+        homeText(c, 28, 31, "HAMA - VIP", 17.5f, White, 274);
          
         c.dl->AddCircleFilled(c.p(308.5f, 39.5f), 9 * c.scale, IM_COL32(0, 235, 126, 14), 28);
         c.dl->AddCircleFilled(c.p(308.5f, 39.5f), 7.5f * c.scale, IM_COL32(0, 235, 126, 24), 28);
